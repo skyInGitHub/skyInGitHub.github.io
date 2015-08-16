@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+
+		<link rel="stylesheet" href="themes/skythemec.css" />
+		<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" />
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript" src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+
+	</head>
+
+	<body>
+		<!--The order page-->
+		<div data-role="page" id="order" data-theme="c">
+			<!--header: Back home icon, Go to menu icon-->
+			<div data-role="header">
+				<a href="home.html" class="ui-btn ui-icon-home ui-btn-icon-notext ui-corner-all">Home</a>
+				<h5>Order</h5>
+				<a href="menu.html" 
+					class="ui-btn ui-btn-icon-right ui-icon-grid ui-btn-icon-notext ui-corner-all">Menu</a>
+			</div>
+			<!--show the check box to select items-->
+			<div data-role="main" class="ui-content">
+				<ul data-role="listview" data-inset="true">
+					<!-- Appetizer category-->
+					<li data-role="list-divider">Appetizer</li>
+					<!--Appetizer1 choose size and qty -->
+					<li>
+						<form id="myform11" action="formprocessor.php" method="post">
+							<label for="select-11">Appetizer1:</label>
+							<select id="select-11" name="select-food" data-native-menu="false" multiple="multiple">
+								<option value="choose" data-placeholder="true">Appetizer1</option>
+								<optgroup label="Size">
+									<option value="small">Small</option>
+									<option value="medium">Medium</option>
+									<option value="big">Big</option>
+								</optgroup>
+								<optgroup label="Quantity">
+									<option value="1">1</option>
+									<option value="2" >2</option>
+									<option value="3">3</option>
+								</optgroup>
+							</select>
+						</form> 
+					</li>
+					<!--Appetizer2 choose size and qty -->
+					<li>
+						<form id="myform12" action="formprocessor.php" method="post">
+							<label for="select-12">Appetizer2:</label>
+							<select id="select-12" name="select-food" data-native-menu="false" multiple="multiple">
+								<option value="choose" data-placeholder="true">Appetizer2</option>
+								<optgroup label="Size">
+									<option value="small">Small</option>
+									<option value="medium">Medium</option>
+									<option value="big">Big</option>
+								</optgroup>
+								<optgroup label="Quantity">
+									<option value="1">1</option>
+									<option value="2" >2</option>
+									<option value="3">3</option>
+								</optgroup>
+							</select>
+						</form> 
+					</li>
+					<!--Appetizer3 choose size and qty -->
+					<li>
+						<form id="myform13" action="formprocessor.php" method="post">
+							<label for="select-13">Appetizer3:</label>
+							<select id="select-13" name="select-food" data-native-menu="false" multiple="multiple">
+								<option value="choose" data-placeholder="true">Appetizer3</option>
+								<optgroup label="Size">
+									<option value="small">Small</option>
+									<option value="medium">Medium</option>
+									<option value="big">Big</option>
+								</optgroup>
+								<optgroup label="Quantity">
+									<option value="1">1</option>
+									<option value="2" >2</option>
+									<option value="3">3</option>
+								</optgroup>
+							</select>
+						</form> 
+					</li>
+					<!--Appetizer4 choose size and qty -->
+					<li>
+						<form id="myform14" action="formprocessor.php" method="post">
+							<label for="select-14">Appetizer4:</label>
+							<select id="select-14" name="select-food" data-native-menu="false" multiple="multiple">
+								<option value="choose" data-placeholder="true">Appetizer4</option>
+								<optgroup label="Size">
+									<option value="small">Small</option>
+									<option value="medium">Medium</option>
+									<option value="big">Big</option>
+								</optgroup>
+								<optgroup label="Quantity">
+									<option value="1">1</option>
+									<option value="2" >2</option>
+									<option value="3">3</option>
+								</optgroup>
+							</select>
+						</form> 
+					</li>
+					<!--Appetizer5 choose size and qty -->
+					<li>
+						<form id="myform15" action="formprocessor.php" method="post">
+							<label for="select-15">Appetizer5:</label>
+							<select id="select-15" name="select-food" data-native-menu="false" multiple="multiple">
+								<option value="choose" data-placeholder="true">Appetizer5</option>
+								<optgroup label="Size">
+									<option value="small">Small</option>
+									<option value="medium">Medium</option>
+									<option value="big">Big</option>
+								</optgroup>
+								<optgroup label="Quantity">
+									<option value="1">1</option>
+									<option value="2" >2</option>
+									<option value="3">3</option>
+								</optgroup>
+							</select>
+						</form> 
+					</li>
+					<!--End of Appetizer category -->
+					<!-- Disserts category-->
+					<li data-role="list-divider">Disserts</li>
+					<!--Dissert1 choose size and qty -->
+					<li>
+						<form id="myform21" action="formprocessor.php" method="post">
+							<label for="select-21">Dissert1:</label>
+							<select id="select-21" name="select-food" data-native-menu="false" multiple="multiple">
+								<option value="choose" data-placeholder="true">Dissert1</option>
+								<optgroup label="Size">
+									<option value="small">Small</option>
+									<option value="medium">Medium</option>
+									<option value="big">Big</option>
+								</optgroup>
+								<optgroup label="Quantity">
+									<option value="1">1</option>
+									<option value="2" >2</option>
+									<option value="3">3</option>
+								</optgroup>
+							</select>
+						</form> 
+					</li>
+					<!--Dissert2 choose size and qty -->
+					<li>
+						<form id="myform22" action="formprocessor.php" method="post">
+							<label for="select-22">Dissert2:</label>
+							<select id="select-22" name="select-food" data-native-menu="false" multiple="multiple">
+								<option value="choose" data-placeholder="true">Dissert2</option>
+								<optgroup label="Size">
+									<option value="small">Small</option>
+									<option value="medium">Medium</option>
+									<option value="big">Big</option>
+								</optgroup>
+								<optgroup label="Quantity">
+									<option value="1">1</option>
+									<option value="2" >2</option>
+									<option value="3">3</option>
+								</optgroup>
+							</select>
+						</form> 
+					</li>
+					<!--Dissert3 choose size and qty -->
+					<li>
+						<form id="myform23" action="formprocessor.php" method="post">
+							<label for="select-23">Dissert3:</label>
+							<select id="select-23" name="select-food" data-native-menu="false" multiple="multiple">
+								<option value="choose" data-placeholder="true">Dissert3</option>
+								<optgroup label="Size">
+									<option value="small">Small</option>
+									<option value="medium">Medium</option>
+									<option value="big">Big</option>
+								</optgroup>
+								<optgroup label="Quantity">
+									<option value="1">1</option>
+									<option value="2" >2</option>
+									<option value="3">3</option>
+								</optgroup>
+							</select>
+						</form> 
+					</li>
+					<!--Dissert4 choose size and qty -->
+					<li>
+						<form id="myform24" action="formprocessor.php" method="post">
+							<label for="select-24">Dissert4:</label>
+							<select id="select-24" name="select-food" data-native-menu="false" multiple="multiple">
+								<option value="choose" data-placeholder="true">Dissert4</option>
+								<optgroup label="Size">
+									<option value="small">Small</option>
+									<option value="medium">Medium</option>
+									<option value="big">Big</option>
+								</optgroup>
+								<optgroup label="Quantity">
+									<option value="1">1</option>
+									<option value="2" >2</option>
+									<option value="3">3</option>
+								</optgroup>
+							</select>
+						</form> 
+					</li>
+					<!--Dissert5 choose size and qty -->
+					<li>
+						<form id="myform25" action="formprocessor.php" method="post">
+							<label for="select-25">Dissert5:</label>
+							<select id="select-25" name="select-food" data-native-menu="false" multiple="multiple">
+								<option value="choose" data-placeholder="true">Dissert5</option>
+								<optgroup label="Size">
+									<option value="small">Small</option>
+									<option value="medium">Medium</option>
+									<option value="big">Big</option>
+								</optgroup>
+								<optgroup label="Quantity">
+									<option value="1">1</option>
+									<option value="2" >2</option>
+									<option value="3">3</option>
+								</optgroup>
+							</select>
+						</form> 
+					</li>
+					<!--End of Dissert category -->
+					<!-- Drinks category-->
+					<li data-role="list-divider">Drinks</li>
+					<!--Drink1 choose size and qty -->
+					<li>
+						<form id="myform31" action="formprocessor.php" method="post">
+							<label for="select-31">Drink1:</label>
+							<select id="select-31" name="select-food" data-native-menu="false" multiple="multiple">
+								<option value="choose" data-placeholder="true">Drink1</option>
+								<optgroup label="Size">
+									<option value="small">Small</option>
+									<option value="medium">Medium</option>
+									<option value="big">Big</option>
+								</optgroup>
+								<optgroup label="Quantity">
+									<option value="1">1</option>
+									<option value="2" >2</option>
+									<option value="3">3</option>
+								</optgroup>
+							</select>
+						</form> 
+					</li>
+					<!--Drink2 choose size and qty -->
+					<li>
+						<form id="myform32" action="formprocessor.php" method="post">
+							<label for="select-32">Drink2:</label>
+							<select id="select-32" name="select-food" data-native-menu="false" multiple="multiple">
+								<option value="choose" data-placeholder="true">Drink2</option>
+								<optgroup label="Size">
+									<option value="small">Small</option>
+									<option value="medium">Medium</option>
+									<option value="big">Big</option>
+								</optgroup>
+								<optgroup label="Quantity">
+									<option value="1">1</option>
+									<option value="2" >2</option>
+									<option value="3">3</option>
+								</optgroup>
+							</select>
+						</form> 
+					</li>
+					<!--Drink3 choose size and qty -->
+					<li>
+						<form id="myform33" action="formprocessor.php" method="post">
+							<label for="select-33">Drink3:</label>
+							<select id="select-33" name="select-food" data-native-menu="false" multiple="multiple">
+								<option value="choose" data-placeholder="true">Drink3</option>
+								<optgroup label="Size">
+									<option value="small">Small</option>
+									<option value="medium">Medium</option>
+									<option value="big">Big</option>
+								</optgroup>
+								<optgroup label="Quantity">
+									<option value="1">1</option>
+									<option value="2" >2</option>
+									<option value="3">3</option>
+								</optgroup>
+							</select>
+						</form> 
+					</li>
+					<!--Drink4 choose size and qty -->
+					<li>
+						<form id="myform34" action="formprocessor.php" method="post">
+							<label for="select-34">Drink4:</label>
+							<select id="select-34" name="select-food" data-native-menu="false" multiple="multiple">
+								<option value="choose" data-placeholder="true">Drink4</option>
+								<optgroup label="Size">
+									<option value="small">Small</option>
+									<option value="medium">Medium</option>
+									<option value="big">Big</option>
+								</optgroup>
+								<optgroup label="Quantity">
+									<option value="1">1</option>
+									<option value="2" >2</option>
+									<option value="3">3</option>
+								</optgroup>
+							</select>
+						</form> 
+					</li>
+					<!--Drink5 choose size and qty -->
+					<li>
+						<form id="myform35" action="formprocessor.php" method="post">
+							<label for="select-35">Drink5:</label>
+							<select id="select-35" name="select-food" data-native-menu="false" multiple="multiple">
+								<option value="choose" data-placeholder="true">Drink5</option>
+								<optgroup label="Size">
+									<option value="small">Small</option>
+									<option value="medium">Medium</option>
+									<option value="big">Big</option>
+								</optgroup>
+								<optgroup label="Quantity">
+									<option value="1">1</option>
+									<option value="2" >2</option>
+									<option value="3">3</option>
+								</optgroup>
+							</select>
+						</form> 
+					</li>
+					<!--End of Drinks category -->
+				</ul>
+			</div>
+		</div>
+	</body>
+
+</html>

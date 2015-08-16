@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+
+		<link rel="stylesheet" href="themes/skythemec.css" />
+		<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" />
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript" src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true"></script>
+		<script>			
+			var stockholm = new google.maps.LatLng(-37.850013, 145.117905);
+			var parliament = new google.maps.LatLng(-37.850013, 145.117905);
+			var marker;
+			var map;
+			
+			function initialize() {
+			  var mapOptions = {
+			    zoom: 18,
+			    center: stockholm
+			  };
+			
+			  map = new google.maps.Map(document.getElementById('map-canvas'),
+			          mapOptions);
+			
+			  marker = new google.maps.Marker({
+			    map:map,
+			    draggable:true,
+			    animation: google.maps.Animation.DROP,
+			    position: parliament
+			  });
+			  google.maps.event.addListener(marker, 'click', toggleBounce);
+			}
+			
+			function toggleBounce() {
+			
+			  if (marker.getAnimation() != null) {
+			    marker.setAnimation(null);
+			  } else {
+			    marker.setAnimation(google.maps.Animation.BOUNCE);
+			  }
+			}
+			
+			google.maps.event.addDomListener(window, 'load', initialize);
+
+		</script>
+		<style>
+			html, body, #map-canvas {
+				height: 400px;
+				margin: 0;
+				padding: 0;
+			}
+		</style>
+	</head>
+
+	<body>
+		<!--The location page-->
+		<div data-role="page" id="location" data-theme="c">
+			<!--header: Back home icon-->
+			<div data-role="header">
+				<a href="home.html"
+					class="ui-btn ui-icon-home ui-btn-icon-notext ui-corner-all">Home</a>
+				<h5>Location</h5>
+			</div>
+			<!--show the map with Google api.-->
+			<div data-role="main" class="ui-content">
+				<button type="button" onclick="history.go(0)">Disserts Gallery Location</button> 
+				<div id="map-canvas"></div>
+			</div>
+		</div>
+	</body>
+
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+
+		<link rel="stylesheet" href="themes/skythemec.css" />
+		<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+		<!--http://jqmdesigner.appspot.com/designer.html#&id=1439553481841-->
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" />
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript" src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+		<script type="text/javascript" src="js/contact.js" ></script>
+
+	</head>
+
+	<body>
+		<!--The contact page-->
+		<div data-role="page" id="contact" data-theme="c">
+			<!--header: Back home icon-->
+			<div data-role="header" data-position="fixed">
+				<a href="home.html"
+					class="ui-btn ui-icon-home ui-btn-icon-notext ui-corner-all">Home</a>
+				<h5>Contact</h5>
+			</div>
+			<!--show my information
+				phone number: has link to call the developer
+				email: has link to send email to this email address
+			-->
+			<div data-role="main" class="ui-content">
+				<!--show my photo-->
+				<div>
+					<img src="img/little_animal_30.png" style="margin-left: -10px;margin-top: -10px;"/>
+				</div>
+				<!--basic information-->
+				<div>
+					<ul data-role="listview" data-inset="true">
+						<!-- my information -->
+						<li data-icon="user">
+							<h3>Name and ID:</h3>
+							<h4>Yuantian Miao, 214277477</h4>
+						</li>
+						<!-- link to my phone, click it in the smart phone will have a phone call -->
+						<li data-icon="phone">
+							<h3>Phone-call:</h3>
+							<a href="tel:0451792574" data-role="button" rel="external">Phone: 0451792574</a>
+						</li>
+						<!--link to my deakin email, click it will send email to me -->
+						<li data-icon="mail">
+							<h3>Email to:</h3>
+							<a href="mailto:myuanti@deakin.edu.au" target="_top">myuanti@deakin.edu.au</a>
+						</li>
+					</ul>
+					<!-- list references -->
+					<ul data-role="listview" data-inset="true">
+						<li>
+							<h5>References</h5>
+						</li>
+						<li>
+							<ol data-role="listview">
+								<li><a href="http://api.jquerymobile.com/">jQuery Mobile</a></li>
+								<li><a href="http://jqmdesigner.appspot.com/designer.html#id=1439602208742">JQM Designer</a></li>
+								<li><a href="http://www.w3schools.com/default.asp">w3schools</a></li>
+								<li><a href="https://www.google.com.au/?hl=zh-cn&gws_rd=cr&ei=c6LOVdrWK-XRmwXDkoSgDA">Google pictures</a></li>
+								<li><a href="http://workshop.rs/2010/07/create-image-gallery-in-4-lines-of-jquery/">Gallery code</a></li>
+							</ol>
+						</li>
+					</ul>
+				</div>
+			</div><!-- End of main content -->
+			<!-- Footer -->
+			<div data-role="footer" data-position="fixed">
+				<h3>&Copy; 214277477</h3>
+			</div>
+		</div>
+	</body>
+
+</html>

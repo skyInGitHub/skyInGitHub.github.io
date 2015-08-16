@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		
+		<link rel="stylesheet" href="themes/skythemec.css" />
+		<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" />
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript" src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+	</head>
+
+	<body>
+		<!--The index page. Give navigation to other pages.-->
+		<div data-role="page" id="index" data-theme="c">
+			<!--header: Back home image-->
+			<div data-role="header" data-position="fixed">
+				<a href="#index"
+					class="ui-btn ui-icon-home ui-btn-icon-notext ui-corner-all">Home</a>
+				<h1>Desserts Gallery</h1>
+			</div>
+			<div data-role="main" class="ui-content">
+				<!--Main picture-->
+				<img src="img/index_title.jpg" style="width:100%; height:200px; position:50% 50%;" is="image">
+				<!--use icons to link six pages-->
+				<!--First Line: Menu, Recipe, Feedback-->
+				<div class="ui-grid-b" style="margin-top:20px;">
+					<!--Menu-->
+					<div class="ui-block-a" align="center">
+						<!--make the icon and title to be one button.
+							freeze the size of this button.
+						-->
+						<div class="ui-btn ui-corner-all ui-shadow" style="width:60px; height:90px">
+							<!--this icon link to menu.html -->
+							<a href="menu.html" style="display:block;width:80px;height:80px;background-image: url(img/index_recipe.jpg);
+							background-size: 100% 100%; background-repeat: no-repeat; margin-left:-10px; margin-top:-5px;"></a>
+							<!--title of icon shows Menu -->
+							<div style="text-align:center;margin-top:5px">Menu</div>
+						</div>
+					</div>
+					<!--Order-->
+					<div class="ui-block-b" align="center">
+						<!--make the icon and title to be one button.
+							freeze the size of this button.
+						-->
+						<div class="ui-btn ui-corner-all ui-shadow" style="width:60px; height:90px">
+							<!--this icon link to order.html -->
+							<a href="order.html" style="display:block;width:80px;height:80px;background-image: url(img/index_menu.jpg);
+							background-size: 100% 100%; background-repeat: no-repeat; margin-left:-10px; margin-top:-5px;"></a>
+							<!--title of icon shows order -->
+							<div style="text-align:center;">Order</div>
+						</div>
+					</div>
+					<!--Feedback-->
+					<div class="ui-block-c" align="center">
+						<!--make the icon and title to be one button.
+							freeze the size of this button.
+						-->
+						<div class="ui-btn ui-corner-all ui-shadow" style="width:60px; height:90px">
+							<!--this icon link to feedback.html -->
+							<a href="feedback.html" style="display:block;width:80px;height:80px;background-image: url(img/index_feedback.jpg);
+							background-size: 100% 100%; background-repeat: no-repeat; margin-left:-10px; margin-top:-5px;"></a>
+							<!--title of icon shows Feedback -->
+							<div style="text-align:center;">Feedback</div>
+						</div>
+					</div>
+				</div> <!--End of first line. -->
+				<!--Second Line: Location, About, Contact-->
+				<div class="ui-grid-b"  style="position:relative">
+					<!--Location-->
+					<div class="ui-block-a" align="center">
+						<!--make the icon and title to be one button.
+							freeze the size of this button.
+						-->
+						<div class="ui-btn ui-corner-all ui-shadow" style="width:60px; height:90px">
+							<!--this icon link to location.html -->
+							<a href="location.html" style="display:block;width:80px;height:80px;background-image: url(img/index_location2.jpg);
+							background-size: 100% 100%; background-repeat: no-repeat; margin-left:-10px; margin-top:-5px;"></a>
+							<!--title of icon shows Location -->
+							<div style="text-align:center;">Location</div>
+						</div>
+					</div>
+					<!--About, to be the picture gallery-->
+					<div class="ui-block-b" align="center">
+						<!--make the icon and title to be one button.
+							freeze the size of this button.
+						-->
+						<div class="ui-btn ui-corner-all ui-shadow" style="width:60px; height:90px">
+							<!--this icon link to about.html -->
+							<a href="about.html" style="display:block;width:80px;height:80px;background-image: url(img/index_about.png);
+							background-size: 100% 100%; background-repeat: no-repeat; margin-left:-10px; margin-top:-5px;"></a>
+							<!--title of icon shows About -->
+							<div style="text-align:center;">About</div>
+						</div>
+					</div>
+					<!--Contact-->
+					<div class="ui-block-c" align="center">
+						<!--make the icon and title to be one button.
+							freeze the size of this button.
+						-->
+						<div class="ui-btn ui-corner-all ui-shadow" style="width:60px; height:90px">
+							<!--this icon link to contact.html -->
+							<a href="contact.html" style="display:block;width:80px;height:80px;background-image: url(img/index_contact.jpg);
+							background-size: 100% 100%; background-repeat: no-repeat; margin-left:-10px; margin-top:-5px;"></a>
+							<!--title of icon shows Contact -->
+							<div style="text-align:center;">Contact</div>
+						</div>
+					</div>
+				</div> <!--End of secon line.-->
+			</div><!-- End of main content -->
+			<!-- Footer -->
+			<div data-role="footer" data-position="fixed">
+				<h3>&Copy; 214277477</h3>
+			</div>
+		</div>
+	</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Restaurant_Feedback</title>
+		
+		<link rel="stylesheet" href="themes/skythemec.css" />
+		<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" />
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript" src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		
+	</head>
+	<body>
+		<!--The feedback page-->
+		<div id="feedback" data-role="page" data-theme="c">
+			<!--header: Back home icon, Refresh icon-->
+			<div data-role="header" data-position="fixed">
+				<a href="home.html" class="ui-btn ui-icon-home ui-btn-icon-notext ui-corner-all">Home</a>
+				<h5>Feedback</h5>
+				<a href="feedback.html" class="ui-btn ui-btn-right ui-icon-refresh ui-btn-icon-notext ui-corner-all">Refresh</a>
+			</div>
+			<!--Submit a feedback form. 
+				use action="....php"(database) yet no.
+			-->
+			<div data-role="main" class="ui-content">
+				<form id="feedbackForm" method="get">
+					<!--Customer name input -->
+					<label>Customer Name:</label></br>
+					<input type="text" name="cusname" /> </br>
+					<!--Customer information input -->
+					<label>Contact Information:</label></br>
+					<input type="text" name="coninfo" /> </br>
+					<!--Feedback input -->
+					<label>Feedback:</label></br>
+					<input type="text" name="febaname" /> </br>
+					<!--submit -->
+					<input type="submit" value="submit" />
+				</form>
+			</div><!-- End of main content -->
+			<!-- Footer -->
+			<div data-role="footer" >
+				<h3>&Copy; 214277477</h3>
+			</div>
+		</div>
+	</body>
+</html>

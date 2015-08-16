@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+
+		<link rel="stylesheet" href="css/menu.css" />
+		<link rel="stylesheet" href="themes/skythemec.css" />
+		<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" />
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript" src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		
+
+	</head>
+
+	<body>
+		<!--The menu page-->
+		<div data-role="page" id="menu" data-theme="c">
+			<!--header: Back home icon, Refresh icon-->
+			<div data-role="header" data-position="fixed">
+				<a href="home.html"
+					class="ui-btn ui-icon-home ui-btn-icon-notext ui-corner-all">Home</a>
+				<h5>Menu</h5>
+				<a href="menu.html"
+					class="ui-btn ui-icon-refresh ui-btn-right ui-btn-icon-notext ui-corner-all">Refresh</a>
+			</div>
+			<!--menu inlcudes: Appetizer, Disserts, Drinks
+				use pictures to link those dishes.
+			-->
+			<div data-role="main" class="ui-content">
+				<!--Appetizer with image.
+					click to link appetizer.html
+				-->
+				<div>
+					<a href="appetizer.html" id="thumb" >
+						<img id="largeImage" src="img/appetizer_big.jpg" style="height:250px;border: 1px solid gray;
+						padding: 4px 4px;width: 95%;margin-right:5%;background-color: white;cursor: pointer;"/>
+						<div id="description" style="background: black;	color: white;position: relative;bottom: 0;padding: 10px 10px;
+							width: 95%;	margin-top: -10px;margin-bottom: 10px;">Appetizer</div>
+					</a>
+				</div>
+				<!--Disserts with image.
+					click to link disserts.html
+				-->
+				<div>
+					<a href="disserts.html" id="thumb">
+						<img id="largeImage" src="img/disserts_big.jpg" style="height:250px;border: 1px solid gray;
+						padding: 4px 4px;width: 95%;margin-right:5%;background-color: white;cursor: pointer;"/>
+						<div id="description" style="background: black;	color: white;position: relative;bottom: 0;padding: 10px 10px;
+							width: 95%;	margin-top: -10px;margin-bottom: 10px;">Disserts</div>
+					</a>
+				</div>
+				<!--Drinks with image.
+					click to link drinks.html
+				-->
+				<div>
+					<a href="drinks.html" id="thumb">
+						<img id="largeImage" src="img/drinks_big.jpg" style="height:250px;border: 1px solid gray;
+						padding: 4px 4px;width: 95%;margin-right:5%;background-color: white;cursor: pointer;"/>
+						<div id="description" style="background: black;	color: white;position: relative;bottom: 0;padding: 10px 10px;
+							width: 95%;	margin-top: -10px;margin-bottom: 10px;">Drinks</div>
+					</a>
+				</div>
+			</div> <!--End of main content -->
+			<!--footer -->
+			<div data-role="footer" data-position="fixed">
+				<h3>&Copy; 214277477</h3>
+			</div>
+		</div>
+	</body>
+
+</html>

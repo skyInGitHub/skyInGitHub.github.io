@@ -1,0 +1,10 @@
+#right-menu span {
+	width: 100%;
+	text-align: center;
+	height: 50px;
+	line-height: 50px;
+	display: block;
+	color: #8cf;
+	font-size: 20px;
+	font-weight: bold;
+}

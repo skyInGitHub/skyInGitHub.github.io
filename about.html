@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+
+		<link rel="stylesheet" href="themes/skythemec.css" />
+		<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+		<link rel="stylesheet" href="css/about.css" />
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" />
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript" src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+		<script type="text/javascript" src="js/about.js" ></script>
+		<script>
+			//makes the picture show above and text behind the picture
+			$('#thumbs img').click(function() {
+				$('#largeImage').attr('src', $(this).attr('src').replace('thumb', 'large'));
+				$('#description').html($(this).attr('alt'));
+			});
+			//reference:http://api.jquery.com/delegate/
+			//delegate method is added into jQurey 1.4.2
+			$('#thumbs').delegate('img','click', function(){
+				$('#largeImage').attr('src',$(this).attr('src').replace('thumb','large'));
+				$('#description').html($(this).attr('alt'));
+			});
+		</script>
+
+	</head>
+
+	<body>
+		<!--The about page-->
+		<div data-role="page" id="about" data-theme="c">
+			<!--header: Back home icon-->
+			<div data-role="header" data-position="fixed">
+				<a href="home.html"
+					class="ui-btn ui-icon-home ui-btn-icon-notext ui-corner-all">Home</a>
+				<h5>About</h5>
+			</div>
+			<!--Gallery: pictures about restaurant
+				reference: http://workshop.rs/2010/07/create-image-gallery-in-4-lines-of-jquery/
+			-->
+			<div data-role="main" class="ui-content">
+				<!--Show some pictures about restaurant as album gallery -->
+				<div id="gallery">
+					<!-- 
+					<div id="panel">
+						<img id="largeImage" src="img/image_01_large.jpg" />
+						<div id="description">First image description</div>
+					</div>
+					-->
+					<div id="thumbs">
+						<img src="img/image_01_large.jpg" alt="1st image description" />
+						<img src="img/image_02_large.jpg" alt="2nd image description" />
+						<img src="img/image_03_large.jpg" alt="3rd image description" />
+						<img src="img/image_04_large.jpg" alt="4th image description" />
+						<img src="img/image_05_large.jpg" alt="5th image description" />
+					</div>
+				</div>
+			</div><!-- End of main content -->
+			<!-- Footer -->
+			<div data-role="footer" data-position="fixed">
+				<h3>&Copy; 214277477</h3>
+			</div>
+		</div>
+	</body>
+
+</html>
