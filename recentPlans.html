@@ -9,6 +9,7 @@
     <link href="css/general.css" rel="stylesheet">
     <link href="css/developers.css" rel="stylesheet">
     <link href="lib/sohp.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css"/>
     <script src="js/jquery-1.js"></script>
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.js"></script>
@@ -17,6 +18,8 @@
     <script src="js/developers.js"></script>
     <script src="lib/jquery.js"></script>
     <script type="text/javascript" src="lib/sohp_carousel.js" ></script>
+    <!--<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>-->
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 <body class="wm-competible"><div style="padding-top: 10px;" class="wm-side-menu hidden-xs">
     <div class="main">
         <a class="needsclick" href="index.html">Home</a>
@@ -46,13 +49,13 @@
         <!-- navbar -->
         <div class="mode1" id="topnav"><div class="navbar navbar-fixed-top wm-navbar" role="navigation">
     <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+<!--<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="index.htm">
+        </button>-->
+        <a class="navbar-brand" href="index.html">
             <span class="navmode mode1">
                 <img alt="TouristPlanner" class="offSticky" src="">
                 <img alt="TouristPlanner" class="onSticky" src="">
@@ -77,22 +80,49 @@
                     Menu<span class="indicator"></span>
                 </span>
             </a>
-        </li>
     </ul>
 </div>
 </div>
-        <div class="area area1 imageBg text-left col-xs-12 whiteText">
+        
+        <div class="col-xs-12" style="margin-top: 150px">
             <div class="container">
-                <div class="row">
-                    <div class="col-sm-7">
-                		<h1>Are You Ready For An Awsome Journey?</h1>
-                		<a class="btn wm-btn-transparent" href="chooseDestination.html">Start Plan</a>
-              		</div>
-              		<div class="row spacer"></div>
-			  		<div class="col-sm-12" style="margin-top: 100px;">
-                		<a class="down-arrow img-down-arrow-black" data-tripit-info="" target="_blank"  href="chooseDestination.html"> </a>
-              		</div>
+            	<a href="map.html" target="_blank">
+                <div class="row" style="color:#FFFEFF; background-color:#154765; height:350px; padding-left:20px; padding-top: 15px">
+                    
+                    	<p>Start Date:</p>
+						<p id="startDate"></p>
+						<p>End Date:</p>
+						<p id="endDate"></p>
+						<p>Days of Plan:</p>
+						<p id="daysPlan"></p>
+						<p>Day One:</p>
+						<p id="dayOnePlan"></p>
+			
+						<label>Plan One: Melbourne</label>
+						
+						<!--display dates-->
+						<script>
+							 // store sDate and eDate
+							if (typeof(Storage) != "undefined") {
+								// Check browser support
+								var sd = localStorage.getItem("startDate");
+								var ed = localStorage.getItem("endDate");
+								var days = localStorage.getItem("daysOfPlan");
+								document.getElementById("startDate").innerHTML = sd;
+								document.getElementById("endDate").innerHTML = ed;
+								document.getElementById("daysPlan").innerHTML = days;
+								
+								if (sd == null || ed == null || days == null){
+									alert("start date or end date is empty");
+								}else{}
+								
+							} else {
+								alert("Sorry, your browser does not support Web Storage...");
+							}
+						</script>
+                    
                 </div>
+				</a>
             </div>
         </div>
         
@@ -111,5 +141,5 @@
 </div></div>
     </div>
 
-
+<script type="text/javascript" src="js/recentPlans.js"></script>
 </body></html>

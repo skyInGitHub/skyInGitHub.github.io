@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>A Tourist Planner</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="MobileOptimized" content="640">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/general.css" rel="stylesheet">
+    <link href="css/developers.css" rel="stylesheet">
+    <link href="lib/sohp.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css"/>
+    <script src="js/jquery-1.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="jsrespond.js"></script>
+    <script src="js/general.js"></script>
+    <script src="js/developers.js"></script>
+    <script src="lib/jquery.js"></script>
+    <script type="text/javascript" src="lib/sohp_carousel.js" ></script>
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<body class="wm-competible"><div style="padding-top: 10px;" class="wm-side-menu hidden-xs">
+    <div class="main">
+        <a class="needsclick" href="index.html">Home</a>
+    </div>
+    <<div style="margin-top: 100px;" class="sub">
+        <a class="needsclick" target="_blank" href="chooseDestination.html">Add a New Plan</a>
+        <a class="needsclick" target="_blank" href="recentPlans.html">Recent Plans</a>
+        <a class="needsclick" target="_blank" href="favorites.html">Favorites</a>
+        <a class="needsclick" target="_blank" href="">ManageAccount</a>
+        <a class="needsclick" target="_blank" href="historyPlans.html">History Plans</a>
+        
+    </div>
+	<div style="margin-top: 150px;" class="main">
+        <a class="needsclick" href="feedback.html">Feedback</a>
+		<a class="needsclick" href="">log out</a>
+    </div>
+</div>
+
+    <!-- mobile-indicator -->
+    <div id="wm-mobile-indicator" class="visible-xs"></div>
+
+    <!--side nav-->
+    <div id="sidenav"></div>
+
+    <!--site-->
+    <div id="site">
+        <!-- navbar -->
+        <div class="mode1" id="topnav"><div class="navbar navbar-fixed-top wm-navbar" role="navigation">
+    <div class="navbar-header">
+		<!--<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>-->
+        <a class="navbar-brand" href="index.html">
+            <span class="navmode mode1">
+                <img alt="TouristPlanner" class="offSticky" src="">
+                <img alt="TouristPlanner" class="onSticky" src="">
+            </span>
+        </a>
+    </div>
+    <div class="">
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav navbar-left">
+                <li class="item1"><a class="needsclick" target="_blank" href="map.html">Map<span class="indicator hidden-xs"></span></a></li>
+                <li class="item2"><a class="needsclick" href="developers.html">Developers<span class="indicator hidden-xs"></span></a></li>
+            </ul>
+        </div>
+    </div>
+    <ul class="nav navbar-nav navbar-right hidden-xs" style="position:fixed; right:47px; top:0">
+        <li class="hidden-sm"><a href="" class="needsclick">Sign Up<span class="indicator"></span></a></li>
+        <li class="hidden-sm"><a href="" class="needsclick">Sign In<span class="indicator"></span></a></li>
+        <li>
+            <a href="#menu" class="menu">
+                <span class="visible-sm">&nbsp;</span>
+                <span class="hidden-sm">
+                    Menu<span class="indicator"></span>
+                </span>
+            </a>
+        </li>
+    </ul>
+</div>
+</div>
+        <div class="area area1 imageBg text-left col-xs-12 whiteText">
+            <div class="container">
+            	<!--<div class="row">
+            		<div class="col-sm-12" style="margin-top: 100px;">
+                		<a class="up-arrow img-up-arrow-black" data-tripit-info="" href="chooseDestination.html"> </a>
+              		</div>
+            	</div>-->
+                <div class="row">
+                    <div class="container">
+                    	<!-- click to chooseDestination -->
+                    	<div class="row stats">
+                <div class="col-xs-6 col-sm-2">
+                    <div class="text-center">
+                        <a href="chooseDate.html"><img class="img-responsive" src=""></a>
+                    </div>
+                    <div class="text-center">
+                        Melbourne
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-2">
+                    <div class="text-center">
+                        <a href="chooseDate.html"><img class="img-responsive" src=""></a>
+                    </div>
+                    <div class="text-center">
+                        Melbourne
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-2">
+                    <div class="text-center">
+                        <a href="chooseDate.html"><img class="img-responsive" src=""></a>
+                    </div>
+                    <div class="text-center">
+                        Melbourne
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-2">
+                    <div class="text-center">
+                        <a href="chooseDate.html"><img class="img-responsive" src=""></a>
+                    </div>
+                    <div class="text-center">
+                        Melbourne
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-2">
+                    <div class="text-center">
+                        <a href="chooseDate.html"><img class="img-responsive" src=""></a>
+                    </div>
+                    <div class="text-center">
+                        Melbourne
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-2">
+                    <div class="text-center">
+                        <a href="chooseDate.html"><img class="img-responsive" src=""></a>
+                    </div>
+                    <div class="text-center">
+                        Melbourne
+                    </div>
+                </div>
+            			</div>
+            			<!-- Create a listview for searching -->
+            			<div class="row sep"></div>
+            <div class="row">
+                <div class="col-sm-10 col-sm-push-1 area2 text-center">
+                    <div class="text-center">
+                        Search for Your Destination:
+                    </div>
+                    <span>
+                        <ul data-role="listview" data-filter="true" data-filter-placeholder="Choose a destination" data-filter-theme="a" data-inset="true">
+                        	<li><a href="chooseDate.html">Melbourne</a></li>
+						</ul>
+                    </span>
+                </div>
+            </div>
+            <div class="row">
+            		<div class="col-sm-12" style="margin-top: 100px;">
+                		<a class="down-arrow img-down-arrow-black" data-tripit-info="" href="chooseDate.html"> </a>
+              		</div>
+            	</div>
+					</div>
+                </div>
+            </div>
+        </div>
+        
+        <!--clear data-->
+        <script>
+			if (typeof(Storage) != "undefined") {
+				// Check browser support
+				localStorage.removeItem("spotsLat");
+				localStorage.removeItem("spotsLng");
+				localStorage.removeItem("spotsName");
+
+				var max = localStorage.getItem("spotsIndexInDayOne");
+				for (var i = 0; i <= max; i++) {
+					localStorage.removeItem("spotsLatInDayOne_" + i);
+					localStorage.removeItem("spotsLngInDayOne_" + i);
+					localStorage.removeItem("spotsNameInDayOne_" + i);
+				}
+
+				localStorage.removeItem("spotsIndexInDayOne");
+				localStorage.removeItem("sDate");
+				localStorage.removeItem("eDate");
+				localStorage.removeItem("daysOfPlan");
+				// Store data
+			} else {
+				alert("Storage is undefined");
+			}
+		</script>
+        
+        <div class="row spacer lastSpacer"></div>
+        <div class="section footer wm-section-footer"><div class="container">
+    <a target="" href="index.htm"><img class="logo" src=""></a>
+    <ul class="nav navbar-nav navbar-right">
+        <li><a href="http://www.worldmate.com/"></a></li>
+        <li><a class="openPopUp" target="_blank" onclick="showPopUpAjax('/corp_privacy.php',false)"></a></li>
+        <li><a href="https://developers.worldmate.com/terms.php"></a></li>
+    </ul>
+    <div class="copyrights col-sm-12 text-center">
+        TouristPlanner © copyright 2015. all rights reserved
+    </div>
+</div></div>
+    </div>
+
+
+</body></html>

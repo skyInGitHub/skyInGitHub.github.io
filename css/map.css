@@ -1,0 +1,6 @@
+html, body, #map-canvas {
+        height: 100%;
+		font-family: Roboto;  /* added by shang */
+        margin: 0px;
+        padding: 0px
+      }
