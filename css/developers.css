@@ -5,7 +5,7 @@
   background: #5c6578 !important;
 }
 .navbar a.menu {
-  background: url(https://cdn.worldmate.com/wm-website/images/icon-nav-base.png) right 61px no-repeat !important;
+  background: url(../img/icon-nav-base.png) right 61px no-repeat !important;
 }
 .navbar.sticky a {
   color: #fffeff !important;
@@ -14,7 +14,7 @@
   background: #fffeff !important;
 }
 .navbar.sticky a.menu {
-  background: url(https://cdn.worldmate.com/wm-website/images/icon-nav.png) right 61px no-repeat !important;
+  background: url(../img/icon-nav-base.png) right 61px no-repeat !important;
 }
 .navbar .offSticky {
   display: block;
@@ -117,14 +117,14 @@
   z-index: inherit;
 }
 body.wm-mobile .wm-navbar .navbar-toggle {
-  background-image: url(https://cdn.worldmate.com/wm-website/images/icon-nav-mobile-base.png) !important;
+  background-image: url(../img/icon-nav-mobile-base) !important;
 }
 body.wm-mobile .wm-navbar .navbar-brand img {
   width: 200px;
   margin-top: 10px;
 }
 body.wm-mobile .wm-navbar.sticky .navbar-toggle {
-  background-image: url(https://cdn.worldmate.com/wm-website/images/icon-nav-mobile.png) !important;
+  background-image: url(../img/icon-nav-mobile-base) !important;
 }
 body.wm-mobile .area1 {
   padding: 80px 0px;

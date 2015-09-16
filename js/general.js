@@ -152,51 +152,51 @@ function checkCompetability() {
     WM.isCompetible = (!WM.isMobile && WM.isIE <= 0)
 }
 
-function loadNav() {
-    $("<div/>").load("/WorldMate-NewWebSite/ajax/" + WM.footerPrefix + "footer.html", function (data) {
-        $(".footer").prepend(data);
-    });
-    $("<div/>").load("/WorldMate-NewWebSite/ajax/" + WM.topNavPrefix + "topnav.html", function (data) {
-        $("#topnav").prepend(data);
-        $("#topnav a.menu").on('click touchend', function (e) {
-            e.stopPropagation();
-            e.preventDefault();
-            $(".wm-side-menu").toggleClass("open");
-        })
-        $("#topnav").addClass("mode" + WM.topMenuMode)
-
-        if (WM.onTopMenuLoaded) WM.onTopMenuLoaded();
-
-        $("<div/>").load("/WorldMate-NewWebSite/ajax/" + WM.sideNavPrefix + "sidenav.html", function (data) {
-            $("body").prepend(data);
-            if (WM.onSideMenuLoaded) WM.onSideMenuLoaded();
-
-            $(document).on('click touchend', function (e) {
-                $(".wm-side-menu").removeClass("open");
-            })
-
-            $(".wm-side-menu").on('click touchend', function (e) {
-                e.stopPropagation();
-            });
-
-            if (WM.isHome && WM.isCompetible) {
-                $(".wm-side-menu a:first, .navbar-brand").on('click touchend', function (e) {
-                    e.stopPropagation();
-                    e.preventDefault();
-                    SectionManager.scroll.release();
-                    SectionManager.scroll.dir = 'up';
-                    SectionManager.items.get(0).activate();
-                });
-            }
-            fixSideNavHeight();
-
-        });
-
-        if ((QueryString.loginFaild && QueryString.loginFaild == 'true') || (QueryString.login && QueryString.login == 'true')) {
-            $('#loginLink').click();
-        }
-    });
-}
+//function loadNav() {
+//  $("<div/>").load("/WorldMate-NewWebSite/ajax/" + WM.footerPrefix + "footer.html", function (data) {
+//      $(".footer").prepend(data);
+//  });
+//  $("<div/>").load("/WorldMate-NewWebSite/ajax/" + WM.topNavPrefix + "topnav.html", function (data) {
+//      $("#topnav").prepend(data);
+//      $("#topnav a.menu").on('click touchend', function (e) {
+//          e.stopPropagation();
+//          e.preventDefault();
+//          $(".wm-side-menu").toggleClass("open");
+//      })
+//      $("#topnav").addClass("mode" + WM.topMenuMode)
+//
+//      if (WM.onTopMenuLoaded) WM.onTopMenuLoaded();
+//
+//      $("<div/>").load("/WorldMate-NewWebSite/ajax/" + WM.sideNavPrefix + "sidenav.html", function (data) {
+//          $("body").prepend(data);
+//          if (WM.onSideMenuLoaded) WM.onSideMenuLoaded();
+//
+//          $(document).on('click touchend', function (e) {
+//              $(".wm-side-menu").removeClass("open");
+//          })
+//
+//          $(".wm-side-menu").on('click touchend', function (e) {
+//              e.stopPropagation();
+//          });
+//
+//          if (WM.isHome && WM.isCompetible) {
+//              $(".wm-side-menu a:first, .navbar-brand").on('click touchend', function (e) {
+//                  e.stopPropagation();
+//                  e.preventDefault();
+//                  SectionManager.scroll.release();
+//                  SectionManager.scroll.dir = 'up';
+//                  SectionManager.items.get(0).activate();
+//              });
+//          }
+//          fixSideNavHeight();
+//
+//      });
+//
+//      if ((QueryString.loginFaild && QueryString.loginFaild == 'true') || (QueryString.login && QueryString.login == 'true')) {
+//          $('#loginLink').click();
+//      }
+//  });
+//}
 
 function onGeneralResize(e) {
     var h = $(window).height();

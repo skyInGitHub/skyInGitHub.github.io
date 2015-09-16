@@ -18,7 +18,7 @@
     <script src="js/developers.js"></script>
     <script src="lib/jquery.js"></script>
     <script type="text/javascript" src="lib/sohp_carousel.js" ></script>
-    <!--<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>-->
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 <body class="wm-competible"><div style="padding-top: 10px;" class="wm-side-menu hidden-xs">
     <div class="main">
@@ -83,46 +83,18 @@
     </ul>
 </div>
 </div>
-        
-        <div class="col-xs-12" style="margin-top: 150px">
+        <div class="area area1 imageBg text-left col-xs-12 whiteText">
             <div class="container">
-            	<a href="map.html" target="_blank">
-                <div class="row" style="color:#FFFEFF; background-color:#154765; height:350px; padding-left:20px; padding-top: 15px">
-                    
-                    	<p>Start Date:</p>
-						<p id="startDate"></p>
-						<p>End Date:</p>
-						<p id="endDate"></p>
-						<p>Days of Plan:</p>
-						<p id="daysPlan"></p>
-						<p>Day One:</p>
-						<p id="dayOnePlan"></p>
-			
-						<label>Plan One: Melbourne</label>
-						
-						<!--display dates-->
-						<script>
-							 // store sDate and eDate
-							if (typeof(Storage) != "undefined") {
-								// Check browser support
-								var sd = localStorage.getItem("startDate");
-								var ed = localStorage.getItem("endDate");
-								var days = localStorage.getItem("daysOfPlan");
-								document.getElementById("startDate").innerHTML = sd;
-								document.getElementById("endDate").innerHTML = ed;
-								document.getElementById("daysPlan").innerHTML = days;
-								
-								if (sd == null || ed == null || days == null){
-									alert("start date or end date is empty");
-								}else{}
-								
-							} else {
-								alert("Sorry, your browser does not support Web Storage...");
-							}
-						</script>
-                    
+            	
+                <div class="row">
+                    <div class="container">
+                    	
+                    	<div class="col-sm-12 text-center">
+                    		To Be Designed
+                    	</div>
+                    	
+					</div>
                 </div>
-				</a>
             </div>
         </div>
         
@@ -141,5 +113,5 @@
 </div></div>
     </div>
 
-<script type="text/javascript" src="js/recentPlans.js"></script>
+<script src="js/date.js"></script>
 </body></html>

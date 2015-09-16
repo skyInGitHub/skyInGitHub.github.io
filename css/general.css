@@ -432,10 +432,10 @@ small {
 }
 .wm-navbar li a.menu {
   padding-right: 40px !important;
-  background: url(https://cdn.worldmate.com/wm-website/images/icon-nav.png) right 61px no-repeat;
+  background: url(../img/icon-nav-base.png) right 61px no-repeat;
 }
 .wm-navbar .navbar-toggle {
-  background: url(https://cdn.worldmate.com/wm-website/images/icon-nav.png) no-repeat center center;
+  background: url(../img/icon-nav-base.png) no-repeat center center;
   position: fixed;
   right: 15px;
   top: 50px;
