@@ -20,14 +20,15 @@ $(document).ready(function() {
 		if (dayOneSpotsStartDate == null || dayOneSpotsEndDate == null || dayOneSpotsDays == null) {
 			alert("start date or end date is empty");
 		} else {
-			$("#startDate").append(document.createTextNode(dayOneSpotsStartDate));
-			$("#endDate").append(document.createTextNode(dayOneSpotsEndDate));
-			$("#daysPlan").append(document.createTextNode(dayOneSpotsDays));
+			$("#startDate").append(dayOneSpotsStartDate);
+			$("#endDate").append(dayOneSpotsEndDate);
+			//$("#daysPlan").append(document.createTextNode(dayOneSpotsDays));
+			$("#daysPlan").append(dayOneSpotsDays + "days");
 		}
 
 		// get the index of spots selected in that day.
 		dayOneSpotsIndex = localStorage.getItem("spotsIndexInDayOne");
-		//alert("dayOne is" + dayOneSpotsIndex);
+		//alert("day one has " + dayOneSpotsIndex + " spots.");
 		
 		// loop the selected spots of that day.
 		// fill the corresponding name into the name's block.
@@ -36,9 +37,10 @@ $(document).ready(function() {
 			//alert(dayOneSpotsName);
 			var num = i + 1;
 			/*$("<p>'dayOneSpotsName'</p>").appendTo( "#dayOnePlan" );*/
-			$("<p></p>", {
+			/*$("<p></p>", {
 				text: num + "." + dayOneSpotsName,
-			}).appendTo("#dayOnePlan");
+			}).appendTo("#dayOnePlan");*/
+			$("#dayOnePlan").append(num + ". " + dayOneSpotsName + "<br/>");
 		}
 
 		// Retrieve data

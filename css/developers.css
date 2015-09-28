@@ -14,7 +14,7 @@
   background: #fffeff !important;
 }
 .navbar.sticky a.menu {
-  background: url(../img/icon-nav-base.png) right 61px no-repeat !important;
+  background: url(../img/icon-nav_sticky.png) right 61px no-repeat !important;
 }
 .navbar .offSticky {
   display: block;
@@ -51,7 +51,7 @@
   color: #5c6578;
 }
 .bgBlue {
-  background: #2d93d1;
+  background: #2D93D1;
   padding: 50px 0px;
 }
 .area2 h2,
@@ -76,26 +76,7 @@
   background: #e4e7ec;
   margin: 50px 0px;
 }
-.social {
-  float: right;
-}
-.social a img {
-  float: left;
-  margin-left: 15px;
-}
-.social a:first-child img {
-  margin-left: 0px;
-}
-.blogDate {
-  text-align: right;
-}
-.author {
-  margin-top: 20px;
-  font-size: 14px !important;
-}
-.author span {
-  color: #2d93d1;
-}
+
 .menu a {
   display: block;
   font-size: 14px !important;
@@ -136,18 +117,7 @@ body.wm-mobile * {
   text-align: center;
   font-size: 1em;
 }
-body.wm-mobile .wm-checkbox-list * {
-  text-align: left;
-}
-body.wm-mobile .wm-checkbox-list li {
-  float: left;
-}
-body.wm-mobile .wm-checkbox-list li .caption {
-  width: 80%;
-}
-body.wm-mobile .wm-checkbox-list li .caption.caption80 {
-  width: 80%;
-}
+
 body.wm-mobile .stats img {
   margin: 20px auto 0;
 }
@@ -160,34 +130,13 @@ body.wm-mobile .circle80 {
   border-radius: 60px;
   font-size: 38px !important;
 }
-body.wm-mobile .media {
-  margin: 30px 0px;
-}
-body.wm-mobile .media-body {
-  text-align: left !important;
-}
 body.wm-mobile .miniSpacer {
   height: 15px;
 }
 img.img-des{
 	text-align: center;
 }
-.wm-checkbox-list li {
-  display: inline-block;
-  margin-bottom: 15px;
-}
-.wm-checkbox-list li .wm-checkbox {
-  border: 3px #2d93d1 solid !important;
-  float: left;
-}
-.wm-checkbox-list li .wm-checkbox .glyphicon {
-  color: #2d93d1;
-}
-.wm-checkbox-list li .caption {
-  position: inherit !important;
-  padding: 0px !important;
-  float: left;
-}
+
 .circle80 {
   width: 80px;
   height: 80px;

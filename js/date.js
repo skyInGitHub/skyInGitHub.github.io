@@ -26,7 +26,7 @@ function countDay() {
 		if (eDate - sDate < 0) {
 			alert("Start Date is after End Date, please select again!");
 		} else {
-			var r = confirm(daysCount + 1 + " days are added to schedule from " + start + " to " + end + "!");
+			var r = confirm(daysCount + 1 + " day(s) will be added to schedule from " + start + " to " + end + "!");
 			// store start date, end date, and days of plan as sDate, eDate, and daysOfPlan
 			// using localStorage to help developers do the text without database.
 			if (typeof(Storage) != "undefined") {
@@ -40,6 +40,6 @@ function countDay() {
 			}//END storage
 		}
 	} else {
-		alert("Please ensure you have choosen Start Date and End Date!");
+		alert("Please ensure you have chosen Start Date and End Date!");
 	}
 }

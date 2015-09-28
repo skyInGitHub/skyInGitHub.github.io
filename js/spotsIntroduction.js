@@ -28,9 +28,9 @@ $(document).ready(function() {
 		} else {
 			spotIndex = indexTem;
 		}
-		//alert(spotLat);
-		//alert(spotName);
-		//alert(spotIndex);
+		//alert('spotsIntroduction:' + spotLat);
+		//alert('spotsIntroduction:' + spotName);
+		//alert('spotsIntroduction:' + spotIndex);
 
 		// Retrieve data
 	} else {
@@ -58,7 +58,7 @@ $(document).ready(function() {
 
 	// Click DayOne to pass the data: lat, lng, name and indedx to recentPlans and maps using localStorage
 	$("#dayOneAdd").click(function() {
-		//alert("clicked!");
+		//alert("clicked to add!");
 
 		// add this spot into day1 in plan
 		// store this spot's name, longtitude and latitude as spotName, spotlat, and spotlng.
@@ -71,6 +71,7 @@ $(document).ready(function() {
 			spotIndex++;
 			localStorage.setItem("spotsIndexInDayOne", spotIndex);
 			// Store data
+			//alert('spotsIntroduction added:' + spotLat);
 		} else {
 			alert("Sorry, your browser does not support Web Storage...");
 		}
