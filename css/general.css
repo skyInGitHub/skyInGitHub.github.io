@@ -460,6 +460,19 @@ small {
 .wm-navbar.sticky .navbar-brand {
   padding: 25px 23px 0px 47px;
 }
+.wm-navbar.tp {
+  background-color: #5c6578;
+}
+.wm-navbar.tp li a {
+  padding: 28px 23px 5px 23px !important;
+}
+.wm-navbar.tp li a.menu {
+  padding-right: 40px !important;
+  background-position: right 33px !important;
+}
+.wm-navbar.tp .navbar-brand {
+  padding: 25px 23px 0px 47px;
+}
 .wm-navbar .download {
   text-align: center;
   padding: 15px 0px;

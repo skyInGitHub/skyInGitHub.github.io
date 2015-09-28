@@ -169,6 +169,9 @@ body.wm-mobile .media-body {
 body.wm-mobile .miniSpacer {
   height: 15px;
 }
+img.img-des{
+	text-align: center;
+}
 .wm-checkbox-list li {
   display: inline-block;
   margin-bottom: 15px;
