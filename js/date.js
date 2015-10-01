@@ -32,8 +32,8 @@ function countDay() {
 			if (typeof(Storage) != "undefined") {
 				// Check browser support
 				var days = daysCount + 1;
-				localStorage.setItem("sDate", sDate);
-				localStorage.setItem("eDate", eDate);
+				localStorage.setItem("sDate", start);
+				localStorage.setItem("eDate", end);
 				localStorage.setItem("daysOfPlan", days);
 			} else {
 				alert("Sorry, your browser does not support Web Storage...");
