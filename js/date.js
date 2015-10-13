@@ -1,45 +1,57 @@
 function countDay() {
+	// Clear data that stored before
+	if (typeof(Storage) != "undefined") {
+		// Check browser support
+		localStorage.removeItem("spotsLat");
+		localStorage.removeItem("spotsLng");
+		/*localStorage.removeItem("destinationLat");
+		localStorage.removeItem("destinationLng");*/
+		localStorage.removeItem("destinationName");
+		localStorage.removeItem("spotsName");
+		localStorage.removeItem("spotsIcon");
+		localStorage.removeItem("spotsPhone");
+		localStorage.removeItem("spotsAddress");
+		localStorage.removeItem("spotsWebsite");
+		var max = localStorage.getItem("spotsIndexInDayOne");
+		for (var i = 0; i <= max; i++) {
+			localStorage.removeItem("spotsLatInDayOne_" + i);
+			localStorage.removeItem("spotsLngInDayOne_" + i);
+			localStorage.removeItem("spotsNameInDayOne_" + i);
+		}
+		localStorage.removeItem("spotsIndexInDayOne");
+		localStorage.removeItem("sDate");
+		localStorage.removeItem("eDate");
+		localStorage.removeItem("daysOfPlan");
+		// Store data
+	} else {
+		alert("Storage is undefined");
+	}
+	
 	// Store for the value of start date
 	var start;
-	// Store for the value of start date
-	var end;
 	// Store for the Date object of start date
 	var sDate;
-	// Store for the Date object of start date
-	var eDate;
 	
 	var tempDate;
-	// Store for the days counted from start date and end date
-	var daysCount;
-	
+	// Get the value of the chosen date
 	start = document.getElementById("startDate").value;
-	end = document.getElementById("endDate").value;
-	if (start.length != 0 && end.length != 0) {
+
+	if (start.length != 0) {
 		tempDate = start.split("-")
 		// change into month-day-year format
 		sDate = new Date(tempDate[1] + '-' + tempDate[2] + '-' + tempDate[0])    
-		tempDate = end.split("-")
-		eDate = new Date(tempDate[1] + '-' + tempDate[2] + '-' + tempDate[0])
 		
-		// convert milliseconds into days
-		daysCount = parseInt(Math.abs(eDate - sDate) / 1000 / 60 / 60 / 24)    
-		if (eDate - sDate < 0) {
-			alert("Start Date is after End Date, please select again!");
+		var r = confirm("You have chose " + start + "!");
+		// store start date
+		// using localStorage to help developers do the text without database.
+		if (typeof(Storage) != "undefined") {
+			// Check browser support
+			localStorage.setItem("sDate", sDate);
 		} else {
-			var r = confirm(daysCount + 1 + " day(s) will be added to schedule from " + start + " to " + end + "!");
-			// store start date, end date, and days of plan as sDate, eDate, and daysOfPlan
-			// using localStorage to help developers do the text without database.
-			if (typeof(Storage) != "undefined") {
-				// Check browser support
-				var days = daysCount + 1;
-				localStorage.setItem("sDate", start);
-				localStorage.setItem("eDate", end);
-				localStorage.setItem("daysOfPlan", days);
-			} else {
-				alert("Sorry, your browser does not support Web Storage...");
-			}//END storage
-		}
+			alert("Sorry, your browser does not support Web Storage...");
+		}//END storage
+		
 	} else {
-		alert("Please ensure you have chosen Start Date and End Date!");
+		alert("Please ensure you have chosen a date!");
 	}
 }

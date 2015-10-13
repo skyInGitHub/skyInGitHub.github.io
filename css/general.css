@@ -510,10 +510,10 @@ small {
 	text-decoration: none;
 }
 .wm-side-menu .main a {
-	font-size: 14px !important;
-	text-transform: uppercase;
-	line-height: 30px;
-	vertical-align: middle;
+	font-size: 16px !important;
+    text-transform: uppercase;
+    line-height: 50px;
+    vertical-align: middle;
 }
 .wm-side-menu .main a.active {
 	color: #2d93d1;

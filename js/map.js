@@ -6,6 +6,7 @@ var directionsService = new google.maps.DirectionsService();
 //Store for spots names
 var spots = new Array();
 
+
 // initialize
 function initialize() {
 	var mapOptions = {
@@ -46,9 +47,23 @@ function initialize() {
 	}
 }
 
+// If the mode driving is selected from side menu
+function calcRouteDriving(){
+	calcRoute("DRIVING");
+}
+
+// If the mode walking is selected from side menu
+function calcRouteWalking(){
+	calcRoute("WALKING");
+}
+// If the mode bicycling is selected from side menu
+function calcRouteBicycling(){
+	calcRoute("BICYCLING");
+}
+
 // Retrieve the start and end locations and create
 // a DirectionsRequest using DRIVING directions.
-function calcRoute() {
+function calcRoute(selectedMode) {
 	var dayOneSpotsIndex;
 	var dayOneSpotsLat;
 	var dayOneSpotsLng;
@@ -61,9 +76,7 @@ function calcRoute() {
 	var tempSpot;
 	// store for waypoints
 	var waypts = [];
-	// get selected mode
-	var selectedMode = document.getElementById('mode').value;
-
+	
 	// using localStorage to help developers do text.
 	if (typeof(Storage) != "undefined") {
 		// Check browser support

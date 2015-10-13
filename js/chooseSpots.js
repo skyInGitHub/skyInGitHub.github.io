@@ -9,7 +9,6 @@ var categoryId;
 //var dayOneDestinationLat;
 //var dayOneDestinationLng;
 var dayOneDestinationName;
-var clickTime = [0, 0, 0, 0];
 
 // GET selected destination location
 if (typeof(Storage) != "undefined") {
@@ -24,12 +23,12 @@ if (typeof(Storage) != "undefined") {
 } // end getting information
 
 // define the location of map
-if (dayOneDestinationName == "melbourne") {
+//if (dayOneDestinationName == "melbourne") {
 	var pyrmont = {
 		lat: -37.817454,
 		lng: 144.967168
 	};
-}
+//}
 //var pyrmont = {
 //	lat: dayOneDestinationLat,
 //	lng: dayOneDestinationLng
@@ -41,55 +40,29 @@ if (dayOneDestinationName == "melbourne") {
 function click_show(id) {
 		// get the id from the button clicked by the user.
 		categoryId = id;
-		var ct = 0;
-		//alert(ct);
 
 		// define the type of place by developers regarding the id.
 		switch (categoryId) {
 			case "History":
 				categoryType = "museum";
-				clickTime[0] = clickTime[0] + 1;
-				ct = clickTime[0];
-				//alert(ct);
 				break;
 			case 'Shopping':
 				categoryType = "jewelry_store";
-				clickTime[1] = clickTime[1] + 1;
-				ct = clickTime[1];
 				break;
 			case "Entertainment":
 				categoryType = "cafe";
-				clickTime[2] = clickTime[2] + 1;
-				ct = clickTime[2];
 				break;
 			case 'Nature':
 				categoryType = "park";
-				clickTime[3] = clickTime[3] + 1;
-				ct = clickTime[3];
 				break;
 			default:
 				break;
-		}
-		//alert(ct);
-
-		// If it was the first time to click the button
-		if (ct == 1) {
-			//alert("find");
-			findMap(pyrmont);
-		}
-
-		// if it was not the first time, just show and hide the block
-		var ulelement = document.getElementById(categoryId);
-		if (ulelement.style.display == 'block') {
-			ulelement.style.display = 'none';
-		} else {
-			ulelement.style.display = 'block';
 		}
 
 		// click one shown, click again none
 		// when click to show, call the function findMap() with initail location.
 		// when click to hide, clear the list of corresponding list to avoid the repitition from the next click and show.
-		/*var ulelement = document.getElementById(categoryId);
+		var ulelement = document.getElementById(categoryId);
 		if (ulelement.style.display == 'block') {
 			var list = document.getElementById(id);
 			while (list.hasChildNodes()) {
@@ -99,7 +72,7 @@ function click_show(id) {
 		} else {
 			findMap(pyrmont);
 			ulelement.style.display = 'block';
-		}*/
+		}
 	} //END click_show(id) function
 
 //CALL findMap function by click_show(id) function
@@ -141,6 +114,7 @@ function callback(results, status) {
 			var ulTitle = categoryId;
 			var liTitle = document.createElement("label");
 			liTitle.innerHTML = ulTitle;
+			liTitle.setAttribute('class', 'categoryLabel');
 			ul.appendChild(liTitle);
 
 			// create arrays to store those places' information that might be used in other page.

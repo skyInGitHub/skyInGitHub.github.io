@@ -3,7 +3,7 @@
 
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-		<title>A Tourist Planner</title>
+		<title>Melbourne Planner</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 		<meta name="MobileOptimized" content="640">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -26,24 +26,13 @@
 	</head>
 
 	<body class="wm-competible">
-		<!--content of side menu-->
-		<div style="padding-top: 10px;" class="wm-side-menu">
+		<!--content of mode of travle-->
+		<div style="padding-top: 50px;" class="wm-side-menu">
 			<!--the first part of side menu-->
 			<div class="main">
-				<a class="needsclick" href="index.html" rel="external">Home</a>
-			</div>
-			<!--the second part of side menu-->
-			<div style="margin-top: 100px;" class="sub">
-				<a class="needsclick" rel="external" href="chooseDestination.html">Add a New Plan</a>
-				<a class="needsclick" rel="external" href="recentPlans.html">Recent Plans</a>
-				<a class="needsclick" rel="external" href="favorites.html">Favorites</a>
-				<a class="needsclick" rel="external" href="">ManageAccount</a>
-				<a class="needsclick" rel="external" href="historyPlans.html">History Plans</a>
-			</div>
-			<!--the third part of side menu-->
-			<div style="margin-top: 150px;" class="main">
-				<a class="needsclick" rel="external" href="feedback.html">Feedback</a>
-				<a class="needsclick" href="">log out</a>
+				<a id="drivingMode" class="needsclick" rel="external" onclick="calcRouteDriving()">Driving</a>
+				<a id="walkingMode" class="needsclick" rel="external" onclick="calcRouteWalking()">Walking</a>
+				<a id="bicyclingMode" class="needsclick" rel="external" onclick="calcRouteBicycling()">Bicycling</a>
 			</div>
 		</div>
 
@@ -64,7 +53,7 @@
 							<span class="navmode mode1">
 								<!--should be the logo of our website, which is to be designed-->
                 				<img alt="TouristPlanner" class="offSticky" src="">
-                				<img alt="TouristPlanner" class="onSticky" src="">
+                				<img alt="TouristPlanner" class="onSticky" src="img/logo1(190-66).png">
             				</span>
 						</a>
 					</div>
@@ -77,16 +66,12 @@
 						</div>
 					</div>
 					<ul class="nav navbar-nav navbar-right" style="position:fixed; right:47px; top:0">
-						<!--click to show current plan-->
-						<li class="hidden-xs"><a href="" class="needsclick" rel="external">My Plan<span class="indicator"></span></a></li>							
-						<!--sign in & sign up function is to be designed-->
-						<li class="hidden-sm hidden-xs"><a href="" class="needsclick">Sign Up<span class="indicator"></span></a></li>
-						<li class="hidden-sm hidden-xs"><a href="" class="needsclick">Sign In<span class="indicator"></span></a></li>
+						<li class="hidden-xs"><a href="feedback.html" class="needsclick">Feedback<span class="indicator"></span></a></li>
 						<li>
 							<!--click to show the side menu-->
 							<a href="#menu" class="menu">
-								<span class="visible-sm visible-xs">&nbsp;</span>
-								<span class="hidden-sm hidden-xs">Menu
+								<span class="menu-display">&nbsp;</span>
+								<span class="menu-display">
 										<span class="indicator"></span>
 								</span>
 							</a>
@@ -98,10 +83,10 @@
 
 			<!--body-->
 			<!--styles defined in bootstrap and developers.css-->
-			<div class="col-xs-12" style="margin-top: 150px">
+			<div class="col-xs-12">
 				<div class="container">
 					<div class="row">
-						<div class="col-xs-6 col-md-4">
+						<div class="col-xs-4 col-md-4 map-left">
 							<h3>Melbourne</h3>
 							<div class="row spacer"></div>
 							<p>Day One:</p>
@@ -117,22 +102,21 @@
 								<option value="BICYCLING">Bicycling</option>
 							</select>
 							<!-- Click to show the route of selected attractions as text and in the Google Map as well -->
-							<input type="submit" value="Show Route" onclick="calcRoute()">
+							<input type="submit" value="Show Route" onclick="calcRoute(mode.value)">
 							<!-- After the button above is clicked, the route would be displayed here -->
-							<div id="directions_panel" style="margin:20px"></div>
+							<div id="directions_panel" class="map-dir"></div>
 						</div>
 						<!-- Display the Google Map -->
-						<div class="col-xs-12 col-md-8 col-sm-6" style="height:400px">
-							<div id="map-canvas">
-							</div>
+						<div class="col-xs-12 col-md-8 col-sm-8 map-right">
+							<div id="map-canvas"></div>
 						</div>
 					</div>
 				</div>
 			</div>
 
 			<!--footer-->
-			<div class="row spacer lastSpacer"></div>
-			<div class="section footer wm-section-footer">
+			<div class="row spacer lastSpacer map-footer"></div>
+			<div class="section footer wm-section-footer map-footer">
 				<div class="container">
 					<div class="copyrights col-sm-12 text-center">
 						TouristPlanner © copyright 2015. all rights reserved

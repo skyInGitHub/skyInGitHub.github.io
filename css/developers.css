@@ -77,6 +77,108 @@
   margin: 50px 0px;
 }
 
+.spot-day{
+		border-radius: 15px;
+    background-color: rgb(92, 101, 120);
+    color: #fffeff;
+    height: 100px;
+    width: 220px;
+    font-weight: 700;
+    font-size: 20px;
+    padding-top: 40px;
+    margin-right: 100px;
+    font-family: Helvetica;
+    text-align: center;
+}
+
+.spot-btn{
+	  background: none;
+    border: 5px #fffeff solid;
+    color: #fffeff;
+    font-size: 20px;
+    line-height: normal;
+    -moz-transition: all ease-out 0.2s;
+    -o-transition: all ease-out 0.2s;
+    -webkit-transition: all ease-out 0.2s;
+    transition: all ease-out 0.2s;
+    border-radius: 10px;
+    line-height: 40px;
+    vertical-align: middle;
+    display: inline-block;
+    font-family: -webkit-pictograph;
+    font-weight: 500;
+    width: 60%;
+    min-width: 137px;
+    border-color: rgb(148, 159, 177);
+    background-color: rgb(148, 159, 177);
+}
+
+.spot-btn:hover {
+	background: rgba(228, 231, 236, 0.3) !important;
+	color: #fffeff;
+}
+
+.categoryNames{
+	color: rgb(84, 87, 92);
+	font-family: cursive;
+}
+
+.categoryLabel{
+	  text-transform: uppercase;
+    font-family: -webkit-pictograph;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.intro-spot{
+	  text-align: left;
+    font-family: cursive;
+    font-size: large;
+}
+
+.fb-label{
+	text-align: left;
+	font-family: -webkit-pictograph;
+}
+
+@media (max-width: 767px) {
+		.map-left{
+			display: none;
+		}
+		.map-footer{
+			display: none;
+		}
+		.map-right{
+			width: 100%;
+			height: 400px;
+			padding-left: 0px;
+			padding-right: 0px;
+			
+		}
+		.map-dir{
+			background-color: rgba(92, 101, 120,0.75);
+    	color: #FFFEFF;
+    	position: absolute;
+    	top: 66px;
+		}
+}
+
+@media (min-width:768px){
+	.map-left{
+		margin-top: 150px;
+	}
+	.map-right{
+		margin-top: 150px;
+		height: 400px;
+	}
+	.menu-display{
+		display: none;
+	}
+	.map-dir{
+		margin: 20px;
+	}
+}
+
 .menu a {
   display: block;
   font-size: 14px !important;
@@ -101,7 +203,7 @@ body.wm-mobile .wm-navbar .navbar-toggle {
   background-image: url(../img/icon-nav-mobile-base) !important;
 }
 body.wm-mobile .wm-navbar .navbar-brand img {
-  width: 200px;
+  width: 110px;
   margin-top: 10px;
 }
 body.wm-mobile .wm-navbar.sticky .navbar-toggle {

@@ -3,11 +3,11 @@
 
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-		<title>A Tourist Planner</title>
+		<title>Melbourne Planner</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 		<meta name="MobileOptimized" content="640">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-			
+
 		<!--link with css and js files-->
 		<link href="css/bootstrap.css" rel="stylesheet">
 		<link href="css/general.css" rel="stylesheet">
@@ -25,26 +25,6 @@
 	</head>
 
 	<body class="wm-competible">
-		<!--content of side menu-->
-		<div style="padding-top: 10px;" class="wm-side-menu">
-			<!--the first part of side menu-->
-			<div class="main">
-				<a class="needsclick" href="index.html" rel="external">Home</a>
-			</div>
-			<!--the second part of side menu-->
-			<div style="margin-top: 100px;" class="sub">
-				<a class="needsclick" rel="external" href="chooseDestination.html">Add a New Plan</a>
-				<a class="needsclick" rel="external" href="recentPlans.html">Recent Plans</a>
-				<a class="needsclick" rel="external" href="favorites.html">Favorites</a>
-				<a class="needsclick" rel="external" href="">ManageAccount</a>
-				<a class="needsclick" rel="external" href="historyPlans.html">History Plans</a>
-			</div>
-			<!--the third part of side menu-->
-			<div style="margin-top: 150px;" class="main">
-				<a class="needsclick" rel="external" href="feedback.html">Feedback</a>
-				<a class="needsclick" href="">log out</a>
-			</div>
-		</div>
 
 		<!-- mobile-indicator -->
 		<div id="wm-mobile-indicator" class="visible-xs"></div>
@@ -63,7 +43,7 @@
 							<span class="navmode mode1">
 								<!--should be the logo of our website, which is to be designed-->
                 				<img alt="TouristPlanner" class="offSticky" src="">
-                				<img alt="TouristPlanner" class="onSticky" src="">
+                				<img alt="TouristPlanner" class="onSticky" src="img/logo1(190-66).png">
             				</span>
 						</a>
 					</div>
@@ -76,67 +56,61 @@
 						</div>
 					</div>
 					<ul class="nav navbar-nav navbar-right" style="position:fixed; right:47px; top:0">
-						<!--click to show current plan-->
-						<li class="hidden-xs"><a href="" class="needsclick" rel="external">My Plan<span class="indicator"></span></a></li>							
-						<!--sign in & sign up function is to be designed-->
-						<li class="hidden-sm hidden-xs"><a href="" class="needsclick">Sign Up<span class="indicator"></span></a></li>
-						<li class="hidden-sm hidden-xs"><a href="" class="needsclick">Sign In<span class="indicator"></span></a></li>
-						<li>
-							<!--click to show the side menu-->
-							<a href="#menu" class="menu">
-								<span class="visible-sm visible-xs">&nbsp;</span>
-								<span class="hidden-sm hidden-xs">Menu
-										<span class="indicator"></span>
-								</span>
-							</a>
-						</li>
+
+						<li class="hidden-sm hidden-xs"><a href="feedback.html" class="needsclick">Feedback<span class="indicator"></span></a></li>
+
 					</ul>
 				</div>
 			</div>
 			<!--end navbar-->
-			
+
 			<!--body-->
 			<!--styles defined in bootstrap and developers.css-->
-			<div class="col-xs-12" style="margin-top: 150px">
+			<!--<div style="background-image:url(img/1.jpg); background-size: cover; background-repeat: no-repeat;">-->
+			<div class="col-xs-12" style="background-image:url(img/date.jpg); background-size: cover; background-repeat: no-repeat; min-height:600px;">
 				<div class="container">
 
-					<div class="row">
-						<div class="col-xs-6 col-md-4">
-							<button type="button" class="btn btn-success">DAY 1</button>
+					<div class="row" style="margin-top: 150px;">
+						<!--<div class="col-xs-6 col-md-4 text-center spot-day">
+							DAY 1
+						</div>-->
+						<!--<div class="col-xs-12 col-md-8 col-sm-6" style="min-height:400px;">-->
+						<!--<div class="row">-->
+						<!--Use four buttons to show the different type of places-->
+						<!--Click the button, then show corresponding places of name. Click this button again then hide this list of place name.-->
+						<div class="col-xs-12 col-md-6 text-center">
+							<label class="spot-btn" onclick="click_show('History');">History</label>
 						</div>
-						<div class="col-xs-12 col-md-8 col-sm-6" style="min-height:400px">
-							<div class="row">
-								<!--Use four buttons to show the different type of places-->
-								<!--Click the button, then show corresponding places of name. Click this button again then hide this list of place name.-->
-								<div class="col-xs-6 col-sm-3 text-center">
-									<button type="button" class="btn btn-primary" onclick="click_show('History');">History</button>
-								</div>
-								<div class="col-xs-6 col-sm-3 text-center">
-									<button type="button" class="btn btn-primary" onclick="click_show('Shopping');">Shopping</button>
-								</div>
-								<div class="col-xs-6 col-sm-3 text-center">
-									<button type="button" class="btn btn-primary" onclick="click_show('Entertainment');">Entertainment</button>
-								</div>
-								<div class="col-xs-6 col-sm-3 text-center">
-									<button type="button" class="btn btn-primary" onclick="click_show('Nature');">Nature</button>
-								</div>
-							</div>
-
-							<!--Create the ul list to show the name of places in its kind of type.-->
-							<div id="category">
-								<ul class="categoryNames" id="History"></ul>
-								<ul class="categoryNames" id="Shopping"></ul>
-								<ul class="categoryNames" id="Entertainment"></ul>
-								<ul class="categoryNames" id="Nature"></ul>
-							</div>
-
-							<!--show the map-->
-							<div id="map" style="max-height:100% "></div>
+						<div class="col-xs-12 col-md-6 text-center">
+							<label class="spot-btn" onclick="click_show('Shopping');">Shopping</label>
 						</div>
+						<!--</div>-->
+
+						<!--<div class="row">-->
+						<div class="col-xs-12 col-md-6 text-center">
+							<label class="spot-btn" onclick="click_show('Entertainment');">Entertainment</label>
+						</div>
+						<div class="col-xs-12 col-md-6 text-center">
+							<label class="spot-btn" onclick="click_show('Nature');">Nature</label>
+						</div>
+						<!--</div>-->
+
+						<!--Create the ul list to show the name of places in its kind of type.-->
+						<div class="row spacer"></div>
+						<div id="category">
+							<ul class="col-xs-6 col-sm-3 categoryNames" id="History"></ul>
+							<ul class="col-xs-6 col-sm-3 categoryNames" id="Shopping"></ul>
+							<ul class="col-xs-6 col-sm-3 categoryNames" id="Entertainment"></ul>
+							<ul class="col-xs-6 col-sm-3 categoryNames" id="Nature"></ul>
+						</div>
+
+						<!--show the map-->
+						<div id="map" style="max-height:100% "></div>
+						<!--</div>-->
 					</div>
 				</div>
 			</div>
-
+			<!--</div>-->
 			<!--footer-->
 			<div class="row spacer lastSpacer"></div>
 			<div class="section footer wm-section-footer">

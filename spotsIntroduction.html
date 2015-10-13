@@ -3,7 +3,7 @@
 
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-		<title>A Tourist Planner</title>
+		<title>Melbourne Planner</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 		<meta name="MobileOptimized" content="640">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -24,26 +24,6 @@
 		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 
 		<body class="wm-competible">
-			<!--content of side menu-->
-			<div style="padding-top: 10px;" class="wm-side-menu">
-				<!--the first part of side menu-->
-				<div class="main">
-					<a class="needsclick" href="index.html" rel="external">Home</a>
-				</div>
-				<!--the second part of side menu-->
-				<div style="margin-top: 100px;" class="sub">
-					<a class="needsclick" rel="external" href="chooseDestination.html">Add a New Plan</a>
-					<a class="needsclick" rel="external" href="recentPlans.html">Recent Plans</a>
-					<a class="needsclick" rel="external" href="favorites.html">Favorites</a>
-					<a class="needsclick" rel="external" href="">ManageAccount</a>
-					<a class="needsclick" rel="external" href="historyPlans.html">History Plans</a>
-				</div>
-				<!--the third part of side menu-->
-				<div style="margin-top: 150px;" class="main">
-					<a class="needsclick" rel="external" href="feedback.html">Feedback</a>
-					<a class="needsclick" href="">log out</a>
-				</div>
-			</div>
 
 			<!-- mobile-indicator -->
 			<div id="wm-mobile-indicator" class="visible-xs"></div>
@@ -75,20 +55,9 @@
 							</div>
 						</div>
 						<ul class="nav navbar-nav navbar-right" style="position:fixed; right:47px; top:0">
-							<!--click to show current plan-->
-							<li class="hidden-xs"><a href="" class="needsclick" rel="external">My Plan<span class="indicator"></span></a></li>
-							<!--sign in & sign up function is to be designed-->
-							<li class="hidden-sm hidden-xs"><a href="" class="needsclick">Sign Up<span class="indicator"></span></a></li>
-							<li class="hidden-sm hidden-xs"><a href="" class="needsclick">Sign In<span class="indicator"></span></a></li>
-							<li>
-								<!--click to show the side menu-->
-							<a href="#menu" class="menu">
-								<span class="visible-sm visible-xs">&nbsp;</span>
-								<span class="hidden-sm hidden-xs">Menu
-										<span class="indicator"></span>
-								</span>
-							</a>
-							</li>
+
+							<li class="hidden-sm hidden-xs"><a href="feedback.html" class="needsclick">Feedback<span class="indicator"></span></a></li>
+
 						</ul>
 					</div>
 				</div>
@@ -104,18 +73,22 @@
 								<!--'a' tag do not work inside button tag, but work outside of it-->
 								<!--click and jump back to chooseSpots page-->
 								<a id="dayOneAdd" href="chooseSpots.html" rel="external">
-									<button type="button" class="btn btn-success">ADD to DAY 1</button>
+									<label class="spot-day">ADD to DAY 1</label>
 								</a>
 							</div>
 							<div class="col-xs-12 col-md-8 col-sm-6 text-center" style="height:400px">
 								<!--The title of introduction-->
 								<h3>Introduction</h3>
+								<div class="row spacer"></div>
 								<!--Catch the icon, name, phone, address and website information, and show on below tags-->
 								<img id="icon" />
-								<p id="name"></p>
-								<p id="phone"></p>
-								<p id="address"></p>
-								<p id="website"></p>
+								<div class="row sep"></div>
+								<div class="row" style="padding-left: 10%;">
+									<p id="name" class="intro-spot"></p>
+									<p id="phone" class="intro-spot"></p>
+									<p id="address" class="intro-spot"></p>
+									<p id="website" class="intro-spot"></p>
+								</div>
 							</div>
 						</div>
 					</div>
